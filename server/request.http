@@ -1,0 +1,98 @@
+POST http://localhost:5000/api/auth/login
+Content-type: application/json
+POST_BODY:
+{
+	"username":"adminlam",
+	"password":"123"
+}
+###
+
+POST http://localhost:5000/api/posts
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NjE2NzA5NzJ9.i54c2LdAzVCDeKvYkWuc5w4_nCrhBaienByOoOdYt1k
+POST_BODY:
+{
+	"title":"react 2",
+	"description":"react 2",
+	"url":"react.com"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NjE2NzA5NzJ9.i54c2LdAzVCDeKvYkWuc5w4_nCrhBaienByOoOdYt1k
+
+###
+
+PUT http://localhost:5000/api/posts/630b2c0d05bd33e4da99d26f
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NjE2NzA5NzJ9.i54c2LdAzVCDeKvYkWuc5w4_nCrhBaienByOoOdYt1k
+POST_BODY:
+{
+	"title":"shopee",
+	"description":"sale shopee",
+	"url":"shopee.com"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/630b2c0d05bd33e4da99d26f
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NjE2NzA5NzJ9.i54c2LdAzVCDeKvYkWuc5w4_nCrhBaienByOoOdYt1k
+
+
+###
+POST http://localhost:5000/api/schedules
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NzEwMjcwMjJ9.7hszm-AYpsKmwMJvGbsph7njfKfw109mdizpC4Z-2BI
+POST_BODY:
+{
+	"id":1,
+	"post":"",
+	"Subject":"sd",
+	"StartTime":"2022-12-13T04:00:00",
+	"EndTime":"2022-12-13T05:00:00"
+}
+
+
+###
+DELETE http://localhost:5000/api/schedules/1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NzEwMjcwMjJ9.7hszm-AYpsKmwMJvGbsph7njfKfw109mdizpC4Z-2BI
+
+###
+PUT http://localhost:5000/api/schedules/1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NzEwMjcwMjJ9.7hszm-AYpsKmwMJvGbsph7njfKfw109mdizpC4Z-2BI
+POST_BODY:
+{
+	"StartTime":"2022-12-14T04:00:00",
+	"EndTime":"2022-12-14T05:00:00"
+}
+
+###
+GET http://localhost:5000/api/schedules
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NzEwMjcwMjJ9.7hszm-AYpsKmwMJvGbsph7njfKfw109mdizpC4Z-2BI
+
+
+###
+POST http://localhost:5000/api/auth/changepass
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NzEwMjcwMjJ9.7hszm-AYpsKmwMJvGbsph7njfKfw109mdizpC4Z-2BI
+POST_BODY:
+{
+	"password":"sd",
+	"passwordNew":""
+}
+
+
+###
+POST http://localhost:5000/api/auth/sendmail
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA3NDczNzVkMjYxOTU3ODdlNTdiZGYiLCJpYXQiOjE2NzEwMjcwMjJ9.7hszm-AYpsKmwMJvGbsph7njfKfw109mdizpC4Z-2BI
+POST_BODY:
+{
+	"email":"lamlife113521@gmail.com"
+}
